@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const bioMessages = [
-    "ZANE | coder | tech enthusiast| well known.",
+    "dev | coder | tech enthusiast| well known.",
     "\"Hello, World!\""
   ];
   let bioText = '';
@@ -670,4 +670,5 @@ document.addEventListener('DOMContentLoaded', () => {
   typeWriterStart();
 
 });
+
 
