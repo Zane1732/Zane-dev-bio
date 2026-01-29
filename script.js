@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  const name = "uvreo";
+  const name = "ZANE";
   let nameText = '';
   let nameIndex = 0;
   let isNameDeleting = false;
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const bioMessages = [
-    "uvreo | cfg maker | tech enthusiast.",
+    "ZANE | coder | tech enthusiast| well known.",
     "\"Hello, World!\""
   ];
   let bioText = '';
@@ -670,3 +670,4 @@ document.addEventListener('DOMContentLoaded', () => {
   typeWriterStart();
 
 });
+
