@@ -12,7 +12,7 @@
             font-family: 'Courier New', monospace;
         }
 
-        
+
         .custom-cursor {
             position: fixed;
             width: 40px;
@@ -24,7 +24,7 @@
             transform: translate(-50%, -50%);
         }
 
-        
+
         body:not(.touch-device) {
             cursor: none;
         }
@@ -78,19 +78,21 @@
             display: none !important;
         }
 
-        
+
         .controls {
             position: fixed;
             bottom: calc(50% - 240px - 10px);
             left: 50%;
             transform: translateX(-50%);
             display: flex;
+            align-items: center;
             gap: 10px;
             z-index: 20;
             background: rgba(0, 0, 0, 0.7);
             padding: 5px 10px;
             border-radius: 20px;
             backdrop-filter: blur(5px);
+            border: none !important;
         }
 
         .theme-button {
@@ -113,7 +115,7 @@
             border-color: rgba(255, 255, 255, 0.8);
         }
 
-        
+
         .volume-control {
             display: flex;
             align-items: center;
@@ -148,7 +150,7 @@
             cursor: pointer;
         }
 
-        
+
         .transparency-control {
             display: flex;
             align-items: center;
@@ -161,7 +163,7 @@
             color: white;
         }
 
-        
+
         .top-controls {
             position: fixed;
             bottom: calc(50% - 240px - 60px);
@@ -175,29 +177,33 @@
             padding: 8px 12px;
             border-radius: 20px;
             backdrop-filter: blur(5px);
+            border: none !important;
         }
 
-        
+
         #profile-block {
             position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: perspective(1000px) translate(-50%, -50%);
             width: 820px;
             min-height: 332px;
-            background: rgba(0, 0, 0, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0);
+            border: 1px solid transparent;
             padding: 20px;
             border-radius: 15px;
             z-index: 20;
             display: flex;
             flex-direction: column;
             gap: 15px;
-            backdrop-filter: blur(10px);
-            opacity: 0;
+            backdrop-filter: none;
+            opacity: 1;
             transform-style: preserve-3d;
             transition: transform 0.5s ease-out;
             pointer-events: auto;
+            translate: none;
+            rotate: none;
+            scale: none;
         }
 
         .profile-header {
@@ -258,7 +264,7 @@
             margin-bottom: 10px;
         }
 
-        
+
         @font-face {
             font-family: 'Angel Wish';
             src: url('assets/Angel_wish.ttf') format('truetype');
@@ -431,25 +437,29 @@
             transform: scale(1.4) rotateY(15deg);
         }
 
-        
+
         #skills-block {
             position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: perspective(1000px) translate(-50%, -50%);
             width: 820px;
             min-height: 332px;
-            background: rgba(0, 0, 0, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0);
+            border: 1px solid transparent;
             padding: 20px;
             border-radius: 15px;
             z-index: 20;
             display: flex;
             flex-direction: column;
             gap: 15px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: none;
             transform-style: preserve-3d;
             transition: transform 0.5s ease-out;
+            translate: none;
+            rotate: none;
+            scale: none;
+            opacity: 1;
         }
 
         .skills-title {
@@ -502,7 +512,7 @@
             background: linear-gradient(90deg, #43e97b, #38f9d7);
         }
 
-        
+
         #results-button-container {
             position: fixed;
             top: 20px;
@@ -555,33 +565,33 @@
             border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
         }
 
-        
+
         .home-theme #profile-block,
         .home-theme #skills-block {
-            border-color: rgba(0, 195, 255, 0.5);
+            border-color: transparent;
         }
 
         .hacker-theme #profile-block,
         .hacker-theme #skills-block {
-            border-color: rgba(0, 255, 0, 0.5);
+            border-color: transparent;
         }
 
         .rain-theme #profile-block,
         .rain-theme #skills-block {
-            border-color: rgba(100, 149, 237, 0.5);
+            border-color: transparent;
         }
 
         .anime-theme #profile-block,
         .anime-theme #skills-block {
-            border-color: rgba(255, 0, 255, 0.5);
+            border-color: transparent;
         }
 
         .car-theme #profile-block,
         .car-theme #skills-block {
-            border-color: rgba(255, 165, 0, 0.5);
+            border-color: transparent;
         }
 
-        
+
         .glitch {
             animation: glitch 0.2s ease-in-out;
         }
@@ -625,7 +635,7 @@
             }
         }
 
-        
+
         .cursor-trail {
             position: fixed;
             pointer-events: none;
@@ -642,7 +652,7 @@
             transition: opacity 0.3s ease;
         }
 
-        
+
         #start-screen {
             position: fixed;
             top: 0;
@@ -665,9 +675,9 @@
             text-align: center;
         }
 
-        
+
         @media (max-width: 430px) {
-            
+
             #profile-block, #skills-block {
                 width: 90vw;
                 max-width: 350px;
@@ -778,7 +788,7 @@
                 font-size: 14px;
             }
 
-            
+
             .controls {
                 bottom: 20px;
                 gap: 8px;
@@ -791,7 +801,7 @@
                 font-size: 12px;
             }
 
-            
+
             .top-controls {
                 bottom: 70px;
                 gap: 10px;
@@ -817,7 +827,7 @@
                 height: 10px;
             }
 
-            
+
             #results-button-container {
                 top: 10px;
             }
@@ -833,7 +843,7 @@
                 padding: 6px 10px;
             }
 
-            
+
             #start-text {
                 font-size: 18px;
                 padding: 0 20px;
@@ -843,27 +853,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Retro+Gaming&display=swap" rel="stylesheet">
 </head>
 <body class="home-theme" onload="initMedia()">
-    
+
     <div class="custom-cursor"></div>
 
-    
+
     <div id="start-screen">
         <div id="start-text"></div>
     </div>
 
     <div class="container">
-        
+
         <video id="background" autoplay loop muted playsinline webkit-playsinline>
             <source src="assets/background.mp4" type="video/mp4">
         </video>
 
-        
+
         <div class="glitch-overlay"></div>
         <div id="hacker-overlay" class="hidden">
-            
+
         </div>
         <div id="snow-overlay" class="hidden">
-            
+
         </div>
 
 
